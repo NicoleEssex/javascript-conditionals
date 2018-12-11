@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conditionals</title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+    //GOAL: get feedback from user about what food they like and respond differently dependant on if they answered yes or no to the question.
+
+    //TO DO: 
+    //ask what "what year were you born"
+    //compare user's answer to the year required to be 21 years old
+    //if the user is too young answer "no sake for you"
+    //else if the user is old enough answer "bottoms up"
+
+    
+    //------------------------------GLOBAL-VARIABLES------------------------------------
+        var likeSteak = "Would you like a steak sandwich ?";
+        var yes = "Enjoy your meal.";
+        var no = "Here is a tofu salad.";
+        var likeBeer = "Would you like a beer with that sandwich ?";
+        var howOld = "What year were you born ?";
+        var tooYoung = "Sorry Charlie you're not old enough";
+        var justRight = "Bottoms Up!";
+    
+    //-----------------------------HARD-CODED------------------------------------------- 
+    //ask user if they like steak
+    //respond with "here is a steak sandwich if they answered yes 
+    //respond with "here is a tofu salad" if they answered no
+
+        if ((confirm("Would you like a steak sandwich ? "))===true) {
+            document.write("Enjoy your meal.");
+            if ((confirm("Would you like a beer with that sandwich ?")) === true) {
+                
+                    if (prompt("What year were you born ?") > 1997) {
+                        alert("sorry charlie you're not old enough");
+                    } else {
+                        alert("bottoms up!")
+                    }
+            } else {
+                document.write("Enjoy your meal.")
+            }
+        } else {
+            document.write("Then here is a tofu salad.")
+        }
+   
+    //-----------------------------DYNAMICALLY-CODED------------------------------------   
+    //ask user if they like steak
+    //respond with "here is a steak sandwich if they answered yes 
+    //respond with "here is a tofu salad" if they answered no
+
+        if(confirm(likeSteak)===true) {
+            document.write(yes);
+        } else {
+            document.write(no);
+        }
+
+    </script>
+</body>
+</html>
